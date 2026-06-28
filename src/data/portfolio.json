@@ -1,0 +1,120 @@
+{
+  "profile": {
+    "name": "Harish R",
+    "titles": [
+      "AI / ML Engineer",
+      "Generative AI Developer",
+      "Full Stack Developer"
+    ],
+    "tagline": "Building end-to-end AI solutions — from data and models to deployment.",
+    "summary": "AI & ML professional with hands-on experience as a Machine Learning Intern developing data-driven and AI-powered applications. Skilled in Python, machine learning, and full-stack development with knowledge of generative AI and LLM concepts. Experienced in building end-to-end solutions from data processing and model development to deployment.",
+    "email": "Harish09103@outlook.com",
+    "phone": "6374456561",
+    "location": "Pollachi, India",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/Harish",
+      "github": "https://github.com/Harish"
+    },
+    "resumeUrl": "/Harish_R_Resume.pdf"
+  },
+  "experience": [
+    {
+      "company": "IntrnForte",
+      "role": "Machine Learning Intern",
+      "period": "06/2024 – 11/2024",
+      "location": "Remote",
+      "highlights": [
+        "Developed an ML-based job recommendation system.",
+        "Applied content-based and collaborative filtering techniques.",
+        "Performed data preprocessing, feature engineering, and model evaluation.",
+        "Improved recommendation relevance by analyzing user behavior and skill similarity."
+      ]
+    },
+    {
+      "company": "Shanthi IT Solution",
+      "role": "Web Development Intern",
+      "period": "02/2026 – 03/2026",
+      "location": "Chennai",
+      "highlights": [
+        "Developed an Education Portal web application with JWT authentication.",
+        "Built a responsive frontend with HTML, CSS, and JavaScript.",
+        "Developed backend APIs using Node.js and Express.js."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Languages",
+      "items": ["Python", "Java", "JavaScript", "SQL"]
+    },
+    {
+      "category": "ML & AI",
+      "items": ["TensorFlow", "PyTorch", "Scikit-learn", "NLP", "Computer Vision", "Generative AI (LLMs, RAG)"]
+    },
+    {
+      "category": "Data & Analytics",
+      "items": ["Pandas", "NumPy", "Power BI", "Tableau", "Plotly"]
+    },
+    {
+      "category": "Cloud & MLOps",
+      "items": ["AWS (S3, EC2, Lambda)", "Docker", "Jenkins", "Model Deployment"]
+    },
+    {
+      "category": "Backend & APIs",
+      "items": ["FastAPI", "Flask", "Postman"]
+    },
+    {
+      "category": "Tools & Databases",
+      "items": ["Git/GitHub", "Jupyter", "OpenCV", "PostgreSQL", "MongoDB", "ClickHouse", "DBeaver"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "LLM-based Intelligent Document Processing System",
+      "context": "Internship Project",
+      "description": "Modular document processing pipeline combining OCR, LLM inference, and rule-based post-processing. Added prompt-driven validation and schema-based consistency checks, reducing manual document review through automated cross-field validation.",
+      "tech": ["Python", "LLMs", "OCR", "RAG", "FastAPI"],
+      "github": "https://github.com/Harish"
+    },
+    {
+      "title": "Kidney Stone Classification using Deep Learning",
+      "context": "Deep Learning",
+      "description": "Binary classification of kidney CT images using InceptionV3, with domain-specific medical image preprocessing on non-contrast CT scans. Evaluated using accuracy and probability-based thresholding.",
+      "tech": ["Python", "TensorFlow", "InceptionV3", "OpenCV", "Computer Vision"],
+      "github": "https://github.com/Harish"
+    },
+    {
+      "title": "Web-Based Data Analytics and Reporting System",
+      "context": "Full Stack",
+      "description": "FastAPI backend for dataset upload, processing, and analytics. Built RESTful APIs for data validation, analytics computation, and report generation, with automated workflows for scheduled report export.",
+      "tech": ["FastAPI", "Python", "Pandas", "REST APIs", "PostgreSQL"],
+      "github": "https://github.com/Harish"
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Tech, Information Technology",
+      "institution": "Dr. Mahalingam College of Engineering & Technology",
+      "detail": "CGPA: 7.42 / 10.0",
+      "period": "2020 – 2026",
+      "location": "Pollachi, India"
+    }
+  ],
+  "courses": [
+    {
+      "name": "Python Data Structures",
+      "provider": "Coursera",
+      "year": "2025"
+    },
+    {
+      "name": "Generative AI Foundations",
+      "provider": "LinkedIn Learning",
+      "year": "2025"
+    },
+    {
+      "name": "Machine Learning",
+      "provider": "IBM",
+      "year": "3 badges"
+    }
+  ]
+}
