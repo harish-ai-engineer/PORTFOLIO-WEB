@@ -21,11 +21,17 @@ export default function Activities() {
             {/* Left: identity + description + highlights */}
             <div>
               {item.context && <p className="index-label mb-3">{item.context}</p>}
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 <CommandLineIcon className="h-7 w-7 text-accent" />
                 <h3 className="font-display text-3xl leading-tight text-paper md:text-4xl">
                   {item.title}
                 </h3>
+                {item.status && (
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-accent">
+                    <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
+                    {item.status}
+                  </span>
+                )}
               </div>
               {item.tagline && (
                 <p className="mt-3 font-display text-lg text-paper/80">{item.tagline}</p>
@@ -75,6 +81,20 @@ export default function Activities() {
                       </p>
                     ))}
                   </div>
+                </div>
+              )}
+
+              {item.roadmap?.length > 0 && (
+                <div>
+                  <p className="index-label mb-3">Roadmap</p>
+                  <ul className="space-y-3">
+                    {item.roadmap.map((r) => (
+                      <li key={r.version} className="flex gap-3 text-sm">
+                        <span className="shrink-0 font-mono text-xs text-accent">{r.version}</span>
+                        <span className="text-paper/60">{r.goal}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               )}
 

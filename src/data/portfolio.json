@@ -150,6 +150,31 @@
   ],
   "activities": [
     {
+      "title": "AgentContext",
+      "context": "Open Source · Python · In Progress",
+      "status": "Currently building",
+      "tagline": "An end-to-end context engineering platform for AI agents — not just a document parser.",
+      "description": "AgentContext ingests information, understands it, and delivers high-quality, traceable context to any LLM or agent framework. Going beyond document conversion tools like Microsoft's MarkItDown, it unifies universal ingestion, document intelligence, AI understanding, smart chunking, embeddings, search, and knowledge graphs — then assembles structured, citation-aware context packages instead of returning raw chunks.",
+      "highlights": [
+        "Universal ingestion across 18+ formats — PDF, DOCX, PPTX, XLSX, HTML, images, audio, video, code repos, and web pages.",
+        "Document intelligence: OCR, layout analysis, table/form extraction, reading-order and formula detection.",
+        "AI understanding layer extracting entities, relationships, topics, summaries, PII, and metadata.",
+        "Smart chunking (semantic, hierarchical, parent-child) with pluggable, cached embedding providers.",
+        "Context Builder returns structured packages — summary, chunks, tables, citations, and confidence — not raw text.",
+        "Citation-aware RAG with knowledge-graph construction, hybrid search, and an agent-friendly SDK, CLI, and REST API."
+      ],
+      "tech": ["Python", "RAG", "LLMs", "OCR", "Knowledge Graph", "Vector DB", "FastAPI", "CLI"],
+      "roadmap": [
+        { "version": "v0.1", "goal": "Universal parsing, Markdown/JSON output, OCR, CLI." },
+        { "version": "v0.2", "goal": "Smart chunking, citations, embeddings, vector database connectors." },
+        { "version": "v0.3", "goal": "Knowledge graph, entity extraction, context builder, search." },
+        { "version": "v1.0", "goal": "Agent APIs, connectors, server mode, plugin system, enterprise features." }
+      ],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/Harish/agentcontext" }
+      ]
+    },
+    {
       "title": "DevTidy",
       "context": "Open Source · Python · PyPI",
       "tagline": "A conservative, cross-platform CLI for finding stale developer artifacts.",
