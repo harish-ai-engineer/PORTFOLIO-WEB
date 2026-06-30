@@ -2,54 +2,91 @@
   "profile": {
     "name": "Harish R",
     "titles": [
-      "AI / ML Engineer",
-      "Generative AI Developer",
-      "Full Stack Developer"
+      "AI / ML Product Developer",
+      "Agentic AI Developer",
+      "LLM & RAG Systems Builder"
     ],
-    "tagline": "Building end-to-end AI solutions — from data and models to deployment.",
-    "summary": "AI & ML professional with hands-on experience as a Machine Learning Intern developing data-driven and AI-powered applications. Skilled in Python, machine learning, and full-stack development with knowledge of generative AI and LLM concepts. Experienced in building end-to-end solutions from data processing and model development to deployment.",
+    "tagline": "I build AI products — not just models.",
+    "summary": "AI/ML Product Developer working at the intersection of AI development and product thinking — taking ideas from concept to production-ready platform. I've shipped full AI platforms end-to-end: architecting backends, integrating LLMs, building agentic workflows, and deploying production infrastructure. From autonomous AI agents to enterprise observability and security platforms, I own the entire build. I design systems that are technically solid, user-facing, and built to scale. I don't ship demos — I ship products.",
     "email": "Harish09103@outlook.com",
     "phone": "6374456561",
     "location": "Pollachi, India",
     "links": {
-      "linkedin": "https://www.linkedin.com/in/Harish",
+      "linkedin": "https://www.linkedin.com/in/harish-ai-engineer-",
       "github": "https://github.com/Harish"
     },
     "resumeUrl": "/Harish_R_Resume.pdf"
   },
   "experience": [
     {
-      "company": "IntrnForte",
-      "role": "Machine Learning Intern",
-      "period": "06/2024 – 11/2024",
-      "location": "Remote",
+      "company": "AANSEAA Technologies",
+      "role": "AI / ML Intern",
+      "period": "Mar 2026 – Present",
+      "location": "Bengaluru, India · On-site",
       "highlights": [
-        "Developed an ML-based job recommendation system.",
-        "Applied content-based and collaborative filtering techniques.",
-        "Performed data preprocessing, feature engineering, and model evaluation.",
-        "Improved recommendation relevance by analyzing user behavior and skill similarity."
+        "Building AI agent systems using the MCP (Multi Agent Protocol) framework.",
+        "Developing end-to-end AI solutions from data and models to deployment.",
+        "Working with LLMs and agentic workflows to automate complex tasks."
       ]
     },
     {
-      "company": "Shanthi IT Solution",
-      "role": "Web Development Intern",
-      "period": "02/2026 – 03/2026",
-      "location": "Chennai",
+      "company": "Actaclad",
+      "role": "AI Product Developer",
+      "period": "May 2026 – Present · Freelance",
+      "location": "Coimbatore, India · Hybrid",
       "highlights": [
-        "Developed an Education Portal web application with JWT authentication.",
+        "Designing AI-powered product features using LangChain.",
+        "Implementing AI governance practices for responsible model usage.",
+        "Building and integrating LLM-based pipelines into production workflows."
+      ]
+    },
+    {
+      "company": "Shanthi IT Solution (SIT)",
+      "role": "Full Stack Engineer — Development Intern",
+      "period": "Mar 2026 · 1 mo",
+      "location": "Chennai, India · On-site",
+      "highlights": [
+        "Developed an Education Portal web application with secure authentication.",
         "Built a responsive frontend with HTML, CSS, and JavaScript.",
         "Developed backend APIs using Node.js and Express.js."
+      ]
+    },
+    {
+      "company": "Shanthi IT Solution (SIT)",
+      "role": "Data Analyst — Data Analytics Intern",
+      "period": "Feb 2026 · 1 mo",
+      "location": "Chennai, India · On-site",
+      "highlights": [
+        "Worked on data analysis and reporting tasks using Python-based tools.",
+        "Performed data cleaning, transformation, and exploratory analysis.",
+        "Generated insights and reports to support decision-making."
+      ]
+    },
+    {
+      "company": "IntrnForte",
+      "role": "Machine Learning Intern",
+      "period": "Aug 2024 – Aug 2025",
+      "location": "Bengaluru, India · Hybrid",
+      "highlights": [
+        "Developed a job recommendation system using content-based and collaborative filtering.",
+        "Performed data preprocessing, feature engineering, and model evaluation.",
+        "Applied Python and deep learning techniques to improve recommendation relevance.",
+        "Analyzed user behavior and skill similarity to personalize results."
       ]
     }
   ],
   "skills": [
     {
       "category": "Languages",
-      "items": ["Python", "Java", "JavaScript", "SQL"]
+      "items": ["Python", "JavaScript", "Node.js", "Java", "SQL"]
+    },
+    {
+      "category": "Agentic AI & LLMs",
+      "items": ["LangChain", "LangGraph", "Multi-Agent Systems", "RAG Pipelines", "LLM Integration", "Prompt Engineering", "Vector Databases"]
     },
     {
       "category": "ML & AI",
-      "items": ["TensorFlow", "PyTorch", "Scikit-learn", "NLP", "Computer Vision", "Generative AI (LLMs, RAG)"]
+      "items": ["TensorFlow", "PyTorch", "Scikit-learn", "NLP", "Computer Vision"]
     },
     {
       "category": "Data & Analytics",
@@ -57,7 +94,7 @@
     },
     {
       "category": "Cloud & MLOps",
-      "items": ["AWS (S3, EC2, Lambda)", "Docker", "Jenkins", "Model Deployment"]
+      "items": ["AWS (S3, EC2, Lambda)", "Azure", "Docker", "Jenkins", "Model Deployment"]
     },
     {
       "category": "Backend & APIs",
@@ -70,25 +107,25 @@
   ],
   "projects": [
     {
-      "title": "LLM-based Intelligent Document Processing System",
-      "context": "Internship Project",
-      "description": "Modular document processing pipeline combining OCR, LLM inference, and rule-based post-processing. Added prompt-driven validation and schema-based consistency checks, reducing manual document review through automated cross-field validation.",
-      "tech": ["Python", "LLMs", "OCR", "RAG", "FastAPI"],
+      "title": "Retrieval-Augmented Generation (RAG) AI Chatbot",
+      "context": "Mar 2026 – May 2026",
+      "description": "A RAG-based AI chatbot that retrieves relevant information from external data sources and generates context-aware responses using Large Language Models. Built with a Node.js and Express backend and a responsive HTML/CSS frontend, with VectorShift pipelines handling document retrieval, embedding-based search, and response generation so users can query documents and receive accurate, grounded answers.",
+      "tech": ["Node.js", "Express.js", "LLMs", "RAG", "VectorShift", "Generative AI"],
       "github": "https://github.com/Harish"
     },
     {
-      "title": "Kidney Stone Classification using Deep Learning",
-      "context": "Deep Learning",
-      "description": "Binary classification of kidney CT images using InceptionV3, with domain-specific medical image preprocessing on non-contrast CT scans. Evaluated using accuracy and probability-based thresholding.",
-      "tech": ["Python", "TensorFlow", "InceptionV3", "OpenCV", "Computer Vision"],
-      "github": "https://github.com/Harish"
+      "title": "Hey Voice — Voice Assistant for Classroom",
+      "context": "Jan 2025 – May 2025 · Dr. Mahalingam College",
+      "description": "A smart classroom assistant that lets teachers and students interact with a computer system using voice commands. Built with HTML, CSS, JavaScript, Python, and a database, it performs various tasks through voice input and facial recognition.",
+      "tech": ["Python", "HTML", "CSS", "JavaScript", "Voice Recognition", "Face Recognition"],
+      "github": "https://github.com/Harish/Activate-Voice-Assistant-For-Classroom-Hey-Voice"
     },
     {
-      "title": "Web-Based Data Analytics and Reporting System",
-      "context": "Full Stack",
-      "description": "FastAPI backend for dataset upload, processing, and analytics. Built RESTful APIs for data validation, analytics computation, and report generation, with automated workflows for scheduled report export.",
-      "tech": ["FastAPI", "Python", "Pandas", "REST APIs", "PostgreSQL"],
-      "github": "https://github.com/Harish"
+      "title": "Job Recommendation System",
+      "context": "Jun 2024 – Jul 2024 · IntrnForte",
+      "description": "A job recommendation system using NLP & ML that suggests similar job roles for a given title. Cleaned and preprocessed 84,000+ job listings with tokenization, stopword removal, stemming, and TF-IDF vectorization, then built a content-based recommendation engine using cosine similarity over combined job fields. Trained models were serialized with Pickle for reuse.",
+      "tech": ["Python", "Pandas", "NLTK", "Scikit-learn", "TF-IDF", "Cosine Similarity"],
+      "github": "https://github.com/Harish/Job-Recommendation-system"
     }
   ],
   "education": [
