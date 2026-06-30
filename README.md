@@ -35,25 +35,6 @@ npm run build    # production build → dist/
 npm run preview  # preview the production build locally
 ```
 
-## 🚀 Deploy to Vercel (free)
-
-A [`vercel.json`](vercel.json) is included (framework `vite`, output `dist`,
-plus SPA rewrites so React Router routes resolve).
-
-### Option A — Deploy from the Vercel dashboard (easiest)
-
-1. Push this repo to GitHub (see commands below).
-2. Go to <https://vercel.com/new> and **Import** the GitHub repo.
-3. Vercel auto-detects Vite — keep the defaults and click **Deploy**.
-4. Your site goes live at `https://<project>.vercel.app`.
-
-### Option B — Deploy from the terminal (Vercel CLI)
-
-```bash
-npm i -g vercel        # install the Vercel CLI (one-time)
-vercel login           # authenticate
-vercel                 # deploy a preview, follow the prompts
-vercel --prod          # promote to production
 ```
 
 ## 📤 Push to GitHub
