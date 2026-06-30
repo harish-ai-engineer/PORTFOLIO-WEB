@@ -7,7 +7,7 @@ export default function Contact() {
   const { profile } = data;
 
   return (
-    <Section id="contact" index="06" eyebrow="Get in touch">
+    <Section id="contact" index="07" eyebrow="Get in touch">
       <div className="hairline pt-8">
         <motion.a
           href={`mailto:${profile.email}`}

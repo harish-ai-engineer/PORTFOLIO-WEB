@@ -148,6 +148,28 @@
       "github": "https://github.com/Harish/Job-Recommendation-system"
     }
   ],
+  "activities": [
+    {
+      "title": "DevTidy",
+      "context": "Open Source · Python · PyPI",
+      "tagline": "A conservative, cross-platform CLI for finding stale developer artifacts.",
+      "description": "DevTidy finds stale developer artifacts — node_modules, Python virtual environments, build outputs, and tool caches — built around one rule: scanning should be easy, but removing data should require an explicit decision. Dry-run scanning is the default, it recognizes project context before flagging risky directories, refuses to operate on protected system and home roots, and never follows directory symlinks.",
+      "highlights": [
+        "Dry-run scanning by default — deletion always requires an explicit, confirmed decision.",
+        "Project-aware safety: refuses filesystem/home roots and never follows directory symlinks.",
+        "Age, size, category, and exclusion filters with configurable traversal depth.",
+        "Archive matches with a JSON manifest and restore them later.",
+        "Machine-readable JSON output for scripts and CI; local history with no telemetry or network calls.",
+        "Colorful terminal dashboard with animated progress."
+      ],
+      "tech": ["Python", "CLI", "pip", "pipx", "Cross-platform"],
+      "install": ["pipx install devtidy", "pip install devtidy"],
+      "links": [
+        { "label": "PyPI", "url": "https://pypi.org/project/devtidy/" },
+        { "label": "GitHub", "url": "https://github.com/Harish/devtidy" }
+      ]
+    }
+  ],
   "education": [
     {
       "degree": "B.Tech, Information Technology",

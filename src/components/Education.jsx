@@ -4,7 +4,7 @@ import data from '../data/portfolio.json';
 
 export default function Education() {
   return (
-    <Section id="education" index="05" eyebrow="Background" title="Education & Courses">
+    <Section id="education" index="06" eyebrow="Background" title="Education & Courses">
       <div className="grid gap-12 md:grid-cols-2 md:gap-16">
         <div>
           <p className="index-label mb-6">Education</p>
