@@ -1,128 +1,119 @@
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-  ArrowDownTrayIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-} from '@heroicons/react/24/outline';
+import { ArrowDownIcon } from '@heroicons/react/24/outline';
 import data from '../data/portfolio.json';
 
-/** Typewriter effect that cycles through the list of titles. */
-function useTypewriter(words, typing = 90, deleting = 45, pause = 1600) {
-  const [text, setText] = useState('');
-  const [index, setIndex] = useState(0);
-  const [deleted, setDeleted] = useState(false);
+const reveal = {
+  hidden: { y: '110%' },
+  show: (i) => ({
+    y: '0%',
+    transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.2 + i * 0.12 },
+  }),
+};
 
-  useEffect(() => {
-    const current = words[index % words.length];
-    let timeout;
-
-    if (!deleted && text === current) {
-      timeout = setTimeout(() => setDeleted(true), pause);
-    } else if (deleted && text === '') {
-      setDeleted(false);
-      setIndex((i) => i + 1);
-    } else {
-      timeout = setTimeout(
-        () => {
-          setText((t) =>
-            deleted ? current.slice(0, t.length - 1) : current.slice(0, t.length + 1)
-          );
-        },
-        deleted ? deleting : typing
-      );
-    }
-
-    return () => clearTimeout(timeout);
-  }, [text, deleted, index, words, typing, deleting, pause]);
-
-  return text;
+/** A single line of the headline that slides up from a clipped mask. */
+function Line({ children, i }) {
+  return (
+    <span className="block overflow-hidden">
+      <motion.span variants={reveal} custom={i} initial="hidden" animate="show" className="block">
+        {children}
+      </motion.span>
+    </span>
+  );
 }
 
 export default function Hero() {
   const { profile } = data;
-  const typed = useTypewriter(profile.titles);
 
   return (
-    <section
-      id="hero"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-6"
-    >
-      {/* Floating ambient orbs */}
-      <div className="pointer-events-none absolute left-1/4 top-1/4 h-72 w-72 animate-float rounded-full bg-electric/20 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-1/4 right-1/4 h-72 w-72 animate-float rounded-full bg-cyan/20 blur-3xl [animation-delay:-3s]" />
-
-      <div className="relative z-10 mx-auto max-w-3xl text-center">
+    <section id="hero" className="relative flex min-h-screen flex-col justify-end overflow-hidden pb-16 pt-32">
+      <div className="container-x">
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-4 font-mono text-sm text-cyan md:text-base"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="index-label mb-8 flex items-center gap-3"
         >
-          <span className="text-electric">$</span> hi, my name is
+          <span className="h-px w-10 bg-accent" />
+          {profile.location} · Available for work
         </motion.p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-mono text-5xl font-extrabold tracking-tight text-white md:text-7xl"
-        >
-          {profile.name}
-        </motion.h1>
+        <h1 className="display text-[15vw] leading-[0.86] sm:text-[13vw] lg:text-[11rem]">
+          <Line i={0}>Harish</Line>
+          <Line i={1}>
+            R<span className="text-accent">.</span>
+          </Line>
+        </h1>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-6 flex min-h-[2.5rem] items-center justify-center font-mono text-xl text-gradient md:text-3xl"
-        >
-          <span>{typed}</span>
-          <span className="ml-1 inline-block h-6 w-[3px] animate-blink bg-cyan md:h-8" />
-        </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-slate-400 md:text-lg"
-        >
-          {profile.tagline}
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-6 flex items-center justify-center gap-2 font-mono text-sm text-slate-500"
-        >
-          <MapPinIcon className="h-4 w-4 text-cyan" />
-          {profile.location}
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
-        >
-          <a
-            href={profile.resumeUrl}
-            download
-            className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-electric to-cyan px-6 py-3 font-mono text-sm font-semibold text-base shadow-glow transition-transform hover:scale-105"
+        <div className="mt-10 grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="max-w-xl text-lg leading-relaxed text-paper/70 md:text-xl"
           >
-            <ArrowDownTrayIcon className="h-5 w-5" />
-            Download CV
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-lg border border-electric/40 px-6 py-3 font-mono text-sm font-semibold text-cyan transition-all hover:bg-electric/10 hover:shadow-glow"
+            {profile.tagline}{' '}
+            <span className="text-paper">{profile.titles[0]}</span> crafting agentic AI
+            systems, RAG pipelines, and production-ready AI products.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.85 }}
+            className="flex flex-wrap items-center gap-4"
           >
-            <EnvelopeIcon className="h-5 w-5" />
-            Contact Me
-          </a>
-        </motion.div>
+            <a
+              href="#contact"
+              className="group inline-flex items-center gap-3 rounded-full bg-paper px-7 py-3 font-mono text-xs uppercase tracking-[0.18em] text-ink transition-transform hover:scale-[1.03]"
+            >
+              Let's talk
+              <span className="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+            <a
+              href={profile.resumeUrl}
+              download
+              className="font-mono text-xs uppercase tracking-[0.18em] text-paper link-underline"
+            >
+              Download CV
+            </a>
+          </motion.div>
+        </div>
       </div>
+
+      {/* Scrolling marquee of titles along the bottom */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className="hairline mt-16 overflow-hidden py-5"
+      >
+        <div className="flex w-max animate-marquee">
+          {[...Array(2)].map((_, dup) => (
+            <div key={dup} className="flex shrink-0 items-center">
+              {profile.titles.concat(['Multi-Agent Systems', 'LangChain · LangGraph']).map((t) => (
+                <span
+                  key={`${dup}-${t}`}
+                  className="flex items-center font-display text-2xl text-paper/40 md:text-3xl"
+                >
+                  <span className="px-8">{t}</span>
+                  <span className="text-accent">✦</span>
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      <motion.a
+        href="#about"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 1.2 }}
+        className="container-x mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-muted hover:text-paper"
+      >
+        <ArrowDownIcon className="h-4 w-4 animate-bounce" />
+        Scroll
+      </motion.a>
     </section>
   );
 }

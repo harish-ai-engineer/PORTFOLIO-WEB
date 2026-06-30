@@ -1,66 +1,58 @@
 import { motion } from 'framer-motion';
-import { AcademicCapIcon, TrophyIcon } from '@heroicons/react/24/outline';
 import Section from './Section';
 import data from '../data/portfolio.json';
 
 export default function Education() {
   return (
-    <Section id="education" eyebrow="learning" title="Education & Courses">
-      <div className="grid gap-6 md:grid-cols-2">
-        {/* Education */}
-        <div className="space-y-6">
-          {data.education.map((edu) => (
-            <motion.div
-              key={edu.degree}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5 }}
-              className="glass glass-hover p-6"
-            >
-              <div className="mb-3 flex items-center gap-2">
-                <AcademicCapIcon className="h-6 w-6 text-electric" />
-                <h3 className="font-mono text-base font-semibold text-white">{edu.degree}</h3>
-              </div>
-              <p className="text-sm text-slate-300">{edu.institution}</p>
-              <div className="mt-3 flex flex-wrap gap-2 font-mono text-xs text-slate-400">
-                <span className="tag">{edu.detail}</span>
-                <span className="tag">{edu.period}</span>
-                <span className="tag">{edu.location}</span>
-              </div>
-            </motion.div>
-          ))}
+    <Section id="education" index="05" eyebrow="Background" title="Education & Courses">
+      <div className="grid gap-12 md:grid-cols-2 md:gap-16">
+        <div>
+          <p className="index-label mb-6">Education</p>
+          <div className="space-y-8">
+            {data.education.map((edu) => (
+              <motion.div
+                key={edu.degree}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5 }}
+                className="hairline pt-5"
+              >
+                <h3 className="font-display text-xl text-paper">{edu.degree}</h3>
+                <p className="mt-1 text-sm text-paper/70">{edu.institution}</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <span className="chip">{edu.detail}</span>
+                  <span className="chip">{edu.period}</span>
+                  <span className="chip">{edu.location}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
-        {/* Courses */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.05 }}
-          className="glass glass-hover p-6"
-        >
-          <div className="mb-4 flex items-center gap-2">
-            <TrophyIcon className="h-6 w-6 text-cyan" />
-            <h3 className="font-mono text-base font-semibold text-white">Courses & Certifications</h3>
-          </div>
-          <ul className="space-y-4">
+        <div>
+          <p className="index-label mb-6">Courses & Certifications</p>
+          <ul className="hairline">
             {data.courses.map((course) => (
-              <li
+              <motion.li
                 key={course.name}
-                className="flex items-start justify-between gap-3 border-b border-white/5 pb-4 last:border-0 last:pb-0"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.45 }}
+                className="flex items-start justify-between gap-3 border-b border-paper/10 py-4"
               >
                 <div>
-                  <p className="text-sm font-medium text-white">{course.name}</p>
-                  <p className="font-mono text-xs text-cyan">{course.provider}</p>
+                  <p className="font-display text-base text-paper">{course.name}</p>
+                  <p className="mt-0.5 font-mono text-xs text-accent/90">{course.provider}</p>
                 </div>
-                <span className="whitespace-nowrap font-mono text-xs text-slate-400">
+                <span className="whitespace-nowrap font-mono text-xs text-muted">
                   {course.year}
                 </span>
-              </li>
+              </motion.li>
             ))}
           </ul>
-        </motion.div>
+        </div>
       </div>
     </Section>
   );

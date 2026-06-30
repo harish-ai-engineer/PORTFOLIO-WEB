@@ -1,4 +1,7 @@
+import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { Routes, Route } from 'react-router-dom';
+import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,7 +14,7 @@ import Footer from './components/Footer';
 
 function Home() {
   return (
-    <main>
+    <main className="relative z-10">
       <Hero />
       <About />
       <Experience />
@@ -24,8 +27,14 @@ function Home() {
 }
 
 export default function App() {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <div className="min-h-screen">
+      <AnimatePresence>
+        {!loaded && <Loader key="loader" onDone={() => setLoaded(true)} />}
+      </AnimatePresence>
+
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

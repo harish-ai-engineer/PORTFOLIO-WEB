@@ -7,7 +7,27 @@
       "LLM & RAG Systems Builder"
     ],
     "tagline": "I build AI products — not just models.",
-    "summary": "AI/ML Product Developer working at the intersection of AI development and product thinking — taking ideas from concept to production-ready platform. I've shipped full AI platforms end-to-end: architecting backends, integrating LLMs, building agentic workflows, and deploying production infrastructure. From autonomous AI agents to enterprise observability and security platforms, I own the entire build. I design systems that are technically solid, user-facing, and built to scale. I don't ship demos — I ship products.",
+    "summary": "AI/ML Product Developer working at the intersection of AI engineering and product development — taking ideas from concept to production. I build complete AI systems, from designing architectures and developing backends to integrating LLMs, creating agentic workflows, and deploying scalable infrastructure. I don't ship demos — I ship products.",
+    "about": {
+      "paragraphs": [
+        "I'm someone who enjoys solving complex problems, learning new technologies, and turning ideas into products that people can actually use. I believe great software isn't just about writing code — it's about understanding the problem, designing the right solution, and delivering something that creates real value.",
+        "As an AI/ML Product Developer, I build AI products — not just models. I work at the intersection of AI engineering and product development, taking ideas from concept to production. I enjoy building complete AI systems, from designing architectures and developing backends to integrating LLMs, creating agentic workflows, and deploying scalable infrastructure.",
+        "My experience includes building autonomous AI agents, RAG applications, AI observability and security platforms, workflow automation systems, and enterprise AI solutions. I enjoy owning the entire product lifecycle and turning complex AI capabilities into practical, production-ready applications.",
+        "I'm passionate about building AI systems that are scalable, reliable, and focused on solving real business problems — not just creating impressive demos. I'm always exploring new developments in Agentic AI, LLMs, AI infrastructure, and workflow automation while contributing to projects that push these technologies into production."
+      ],
+      "coreTechnologies": [
+        "LangChain", "LangGraph", "LLM Integration", "RAG Pipelines", "Multi-Agent Systems",
+        "Python", "Node.js", "FastAPI", "Vector Databases", "Docker", "Azure", "AWS",
+        "REST APIs", "Prompt Engineering"
+      ],
+      "openTo": [
+        "AI Product Developer roles",
+        "AI/ML Developer opportunities",
+        "Agentic AI & workflow automation projects",
+        "Freelance AI product development",
+        "Open-source collaborations"
+      ]
+    },
     "email": "Harish09103@outlook.com",
     "phone": "6374456561",
     "location": "Pollachi, India",

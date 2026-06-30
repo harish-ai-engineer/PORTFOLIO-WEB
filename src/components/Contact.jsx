@@ -1,4 +1,4 @@
-import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import { motion } from 'framer-motion';
 import Section from './Section';
 import { GithubIcon, LinkedinIcon } from './BrandIcons';
 import data from '../data/portfolio.json';
@@ -7,57 +7,60 @@ export default function Contact() {
   const { profile } = data;
 
   return (
-    <Section id="contact" eyebrow="get in touch" title="Contact">
-      <div className="glass mx-auto max-w-2xl p-8 text-center md:p-12">
-        <p className="mx-auto max-w-md text-slate-300">
-          I'm currently open to new opportunities and collaborations. Whether you have a
-          question or just want to say hi, my inbox is always open.
-        </p>
-
-        <a
+    <Section id="contact" index="06" eyebrow="Get in touch">
+      <div className="hairline pt-8">
+        <motion.a
           href={`mailto:${profile.email}`}
-          className="mx-auto mt-8 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-electric to-cyan px-7 py-3 font-mono text-sm font-semibold text-base shadow-glow transition-transform hover:scale-105"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="group block"
         >
-          <EnvelopeIcon className="h-5 w-5" />
-          Say Hello
-        </a>
-
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 font-mono text-sm text-slate-300 sm:flex-row sm:gap-8">
-          <a
-            href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 transition-colors hover:text-cyan"
-          >
-            <EnvelopeIcon className="h-4 w-4 text-cyan" />
+          <span className="display block text-[12vw] leading-[0.95] text-paper transition-colors group-hover:text-accent md:text-[9rem]">
+            Let's talk
+            <span className="text-accent">.</span>
+          </span>
+          <span className="mt-4 inline-flex items-center gap-3 font-mono text-sm text-paper/70 group-hover:text-paper md:text-base">
             {profile.email}
-          </a>
-          <a
-            href={`tel:${profile.phone}`}
-            className="inline-flex items-center gap-2 transition-colors hover:text-cyan"
-          >
-            <PhoneIcon className="h-4 w-4 text-cyan" />
-            {profile.phone}
-          </a>
-        </div>
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </span>
+        </motion.a>
 
-        <div className="mt-8 flex items-center justify-center gap-4">
-          <a
-            href={profile.links.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="rounded-full border border-white/10 p-3 text-slate-300 transition-all hover:border-electric/50 hover:text-cyan hover:shadow-glow"
-          >
-            <GithubIcon />
-          </a>
-          <a
-            href={profile.links.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="rounded-full border border-white/10 p-3 text-slate-300 transition-all hover:border-electric/50 hover:text-cyan hover:shadow-glow"
-          >
-            <LinkedinIcon />
-          </a>
+        <div className="mt-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <p className="max-w-md text-base leading-relaxed text-paper/60">
+            If you're building something serious with AI — from autonomous agents to
+            production observability platforms — let's make it real.
+          </p>
+
+          <div className="flex flex-col gap-4">
+            <a
+              href={`tel:${profile.phone}`}
+              className="font-mono text-sm text-paper/70 link-underline"
+            >
+              {profile.phone}
+            </a>
+            <div className="flex items-center gap-3">
+              <a
+                href={profile.links.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-paper/15 text-paper/70 transition-all hover:border-accent hover:text-accent"
+              >
+                <GithubIcon />
+              </a>
+              <a
+                href={profile.links.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-paper/15 text-paper/70 transition-all hover:border-accent hover:text-accent"
+              >
+                <LinkedinIcon />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </Section>
